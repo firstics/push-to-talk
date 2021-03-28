@@ -20,8 +20,5 @@ module.exports = function(app) {
     app.route('/sendMessage').post(chatMessageController.sendMessage);
     app.route('/sendAudio').post(chatMessageController.sendAudioMessage);
 
-
     app.route('/saveRecordFile').post(inventoryController.saveRecordFile);
-
-
 }
