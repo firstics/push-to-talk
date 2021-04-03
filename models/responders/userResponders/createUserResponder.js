@@ -1,17 +1,17 @@
 'use strict';
 
-const method = editProfileReq.prototype
+const method = userResponder.prototype
 
-function editProfileReq(userId, fullName, username, password, ableToTalk){
-    this.userId = userId;
-    this.fullName = fullName;
-    this.username = username;
-    this.password = password;
-    this.ableToTalk = ableToTalk;
+function userResponder(){
+    this.errors = null;
+    this.fullName = null;
+    this.username = null;
+    this.password = null;
+    this.ableToTalk = false;
 }
 
-method.getUserId = function(){
-    return this.userId
+method.getErrors = function(){
+    return this.errors
 }
 
 method.getFullName = function(){
@@ -30,12 +30,12 @@ method.getAbleToTalk = function(){
     return this.ableToTalk
 }
 
-method.setUserId =  function(fullName){
-    this.fullName = fullName
+method.setErrors = function(errors){
+    this.errors = errors
 }
 
-method.setFullName = function(userId){
-    this.userId = userId
+method.setFullName = function(fullName){
+    this.fullName = fullName
 }
 
 method.setUsername = function(username) {
@@ -50,4 +50,7 @@ method.setAbleToTalk = function(ableToTalk) {
     this.ableToTalk = ableToTalk
 }
 
-module.exports = editProfileReq;
+
+
+
+module.exports = userResponder;
