@@ -14,13 +14,11 @@ module.exports = function(app) {
     app.route('/createAdmin').post(adminController.createAdmin);
     app.route('/adminInfo').get(adminController.getAdminDetail);
 
-    app.route('/getChatRoom').get(chatRoomController.getChatRoomMessage);
+    app.route('/getReport').get(chatRoomController.getReport);
     app.route('/createRoom').post(chatRoomController.createChatRoomMessage);
     app.route('/listRooms').get(chatRoomController.listAllRoom);
 
     app.route('/sendMessage').post(chatMessageController.sendMessage);
     app.route('/sendAudio').post(chatMessageController.sendAudioMessage);
     app.route('/getAllMsg').post(chatMessageController.getAllMessages);
-
-    //app.route('/saveRecordFile').post(inventoryController.saveRecordFile);
 }

@@ -20,7 +20,7 @@ module.exports = function chatMsgService() {
         const requesters = new sendMsgReq(req.body.message,req.body.messageType, req.body.sentBy, req.body.chatRoomId);
         
         const chatMsgRepo = new chatMsgRepository();
-        chatMsgRepo.saveMsg(requesters, function(deals){
+        chatMsgRepo.saveMsg(requesters, function(result){
             if(result != ""){
                 resp.setMessageSent(true);
             }

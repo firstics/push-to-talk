@@ -2,9 +2,9 @@
 
 const chatRoomService = require('../services/chatRoomService');
 
-exports.getChatRoomMessage = function(req,res) {
+exports.getReport = function(req,res) {
     const service = new chatRoomService();
-    service.getChatRoom(req, function(result){
+    service.getReport(req, function(result){
         res.set('Content-Type','application/json');
         if(result.getErrors() != null){
             res.status(400)
